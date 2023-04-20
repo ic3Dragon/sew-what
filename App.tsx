@@ -16,20 +16,20 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#25292e',
+    backgroundColor: '#fcfbfb',
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center'
   },
   text: {
     fontSize: 30,
-    color: '#fff',
+    color: '#25292f',
     marginTop: 40,
   },
   logo_container: {
     marginTop: -120,
-    width: 150,
-    height: 150,
+    width: 170,
+    height: 170,
     backgroundColor: 'rgb(205, 253, 255)',
     display: 'flex',
     alignItems: 'center',
@@ -37,14 +37,14 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   logo: {
-    width: 120, 
-    height: 120
+    width: 140, 
+    height: 140
   },
 });
 
 // const newColorTheme = {
 //   brand: {
-//     white: "#fcfbfb",
+//     light: "#fcfbfb",
 //     dark: "#25292f",
 //     lightblue: "#cdfdff",
 //     darkblue: "#05aabb",
