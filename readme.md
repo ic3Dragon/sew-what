@@ -23,3 +23,8 @@
 ### Available at
 
 [To be added later](.)
+
+### Screenshots
+
+**Version 0:**
+![Screenshot Version 0](./assets/sewVersion0.jpg)
