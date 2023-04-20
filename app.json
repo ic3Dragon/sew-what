@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "910b1caf-7c52-460c-880f-7e1ab13188eb"
+      }
+    },
+    "owner": "ic3dragon"
   }
 }
