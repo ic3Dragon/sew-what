@@ -1,8 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
+import { StackScreenProps } from '@react-navigation/stack';
+import { Button } from 'react-native-elements';
 
-export default function Welcome() {
+const Welcome: React.FC<StackScreenProps<any>> = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.logo_container}>
@@ -10,6 +12,10 @@ export default function Welcome() {
       </View>
       <Text style={styles.text}>Welcome!</Text>
       <Text style={styles.text}>App under construction...</Text>
+      <View style={styles.buttons}>
+        <Button title="Sign In" buttonStyle={styles.button} onPress ={() => navigation.navigate('Sign In')}/>
+        <Button title="Sign Up" buttonStyle={{borderColor: '#05aabb'}} titleStyle={{color: '#05aabb'}} type="outline" onPress ={() => navigation.navigate('Sign Up')}/>
+      </View>
       <StatusBar style="auto" />
     </View>
   );
@@ -42,6 +48,13 @@ const styles = StyleSheet.create({
     width: 140, 
     height: 140
   },
+  buttons: {
+    marginTop: 10,
+    gap: 10
+  },
+  button: {
+    backgroundColor: '#05aabb'
+  }
 });
 
 // const newColorTheme = {
@@ -53,3 +66,5 @@ const styles = StyleSheet.create({
 //     orange: "#fab007"
 //   }
 // }
+
+export default Welcome;
