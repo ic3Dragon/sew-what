@@ -10,7 +10,7 @@
 - Typescript
 - Expo
 
-### Planning Board & Wireframes
+### Planning Board & Design
 
 ![Excalidraw Board](./assets/sew-what-planning.png)
 
@@ -27,4 +27,4 @@
 ### Screenshots
 
 **Version 0:**
-![Screenshot Version 0](./assets/sewVersion0.jpg)
+<img alt="Screenshot Version 0" src="./assets/sewVersion0.jpg" width="250px"/>
