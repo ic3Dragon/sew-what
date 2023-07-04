@@ -1,12 +1,11 @@
 {
   "name": "sew-what",
   "version": "1.0.0",
-  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
+    "start": "expo start --dev-client",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web --https",
     "test": "jest"
   },
   "jest": {
@@ -20,16 +19,23 @@
     "@react-navigation/stack": "^6.3.16",
     "@types/react": "~18.0.27",
     "dotenv": "^16.0.3",
-    "expo": "~48.0.11",
+    "expo": "~48.0.18",
     "expo-constants": "~14.2.1",
     "expo-status-bar": "~1.4.4",
-    "firebase": "^9.20.0",
     "jest": "^29.2.1",
     "jest-expo": "^48.0.2",
     "react": "18.2.0",
-    "react-native": "0.71.6",
+    "react-native": "0.71.8",
     "react-native-elements": "^3.4.3",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.4",
+    "expo-web-browser": "~12.1.1",
+    "@react-native-async-storage/async-storage": "1.17.11",
+    "expo-auth-session": "~4.0.3",
+    "expo-crypto": "~12.2.1",
+    "react-native-web": "~0.18.10",
+    "react-dom": "18.2.0",
+    "@expo/webpack-config": "^18.0.1",
+    "expo-splash-screen": "~0.18.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
