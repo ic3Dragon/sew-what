@@ -13,8 +13,8 @@ const Welcome: React.FC<StackScreenProps<any>> = ({ navigation }) => {
       <Text style={styles.text}>Welcome!</Text>
       <Text style={styles.text}>App under construction...</Text>
       <View style={styles.buttons}>
-        <Button title="Sign In" buttonStyle={styles.button} onPress ={() => navigation.navigate('Sign In')}/>
-        <Button title="Sign Up" buttonStyle={{borderColor: '#05aabb'}} titleStyle={{color: '#05aabb'}} type="outline" onPress ={() => navigation.navigate('Sign Up')}/>
+        <Button title="Sign In" buttonStyle={styles.button} onPress ={() => navigation.navigate('Home')}/>
+        {/* <Button title="Sign Up" buttonStyle={{borderColor: '#05aabb'}} titleStyle={{color: '#05aabb'}} type="outline" onPress ={() => navigation.navigate('Sign Up')}/> */}
       </View>
       <StatusBar style="auto" />
     </View>
