@@ -27,4 +27,5 @@
 ### Screenshots
 
 **Version 0:**
+
 <img alt="Screenshot Version 0" src="./assets/sewVersion0.jpg" width="250px"/>
