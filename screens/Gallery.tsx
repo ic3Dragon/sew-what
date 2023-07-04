@@ -1,4 +1,4 @@
-import {View, StyleSheet, TextInput} from 'react-native';
+import {View, StyleSheet, TextInput, Text} from 'react-native';
 import React from 'react'
 import { COLORS } from '../utils/constants';
 
@@ -14,6 +14,10 @@ const Gallery = () => {
           value={search}
           placeholder="Search    🔍"
         />
+      </View>
+      <Text>All Patterns &gt; </Text>
+      <View style={styles.gallery}>
+        <Text>Individual pattern cards go here</Text>
       </View>
     </View>
   )
@@ -41,6 +45,9 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     fontSize: 20,
   },
+  gallery: {
+
+  }
 });
 
 export default Gallery
