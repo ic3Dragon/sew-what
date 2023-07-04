@@ -2,7 +2,8 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { StackScreenProps } from '@react-navigation/stack';
-import { Button } from 'react-native-elements';
+import Button  from '../components/Button';
+import { COLORS } from '../utils/constants';
 
 const Welcome: React.FC<StackScreenProps<any>> = ({ navigation }) => {
   return (
@@ -13,8 +14,8 @@ const Welcome: React.FC<StackScreenProps<any>> = ({ navigation }) => {
       <Text style={styles.text}>Welcome!</Text>
       <Text style={styles.text}>App under construction...</Text>
       <View style={styles.buttons}>
-        <Button title="Sign In" buttonStyle={styles.button} onPress ={() => navigation.navigate('Home')}/>
-        {/* <Button title="Sign Up" buttonStyle={{borderColor: '#05aabb'}} titleStyle={{color: '#05aabb'}} type="outline" onPress ={() => navigation.navigate('Sign Up')}/> */}
+        <Button title="Open Gallery" color={COLORS.darkblue} onPress ={() => navigation.navigate('Gallery')}/>
+        <Button title="Add New Pattern"  color={COLORS.darkblue} onPress ={() => navigation.navigate('New Pattern')}/>
       </View>
       <StatusBar style="auto" />
     </View>
@@ -24,21 +25,22 @@ const Welcome: React.FC<StackScreenProps<any>> = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fcfbfb',
+    backgroundColor: COLORS.light,
     alignItems: 'center',
     justifyContent: 'center',
-    textAlign: 'center'
+    textAlign: 'center',
+    gap: 10
   },
   text: {
     fontSize: 30,
-    color: '#25292f',
-    marginTop: 40,
+    color: COLORS.dark,
   },
   logo_container: {
     marginTop: -120,
+    marginBottom: 30,
     width: 170,
     height: 170,
-    backgroundColor: 'rgb(205, 253, 255)',
+    backgroundColor: COLORS.lightblue,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -49,22 +51,9 @@ const styles = StyleSheet.create({
     height: 140
   },
   buttons: {
-    marginTop: 10,
-    gap: 10
-  },
-  button: {
-    backgroundColor: '#05aabb'
+    marginTop: 30,
+    gap: 20
   }
 });
-
-// const newColorTheme = {
-//   brand: {
-//     light: "#fcfbfb",
-//     dark: "#25292f",
-//     lightblue: "#cdfdff",
-//     darkblue: "#05aabb",
-//     orange: "#fab007"
-//   }
-// }
 
 export default Welcome;
