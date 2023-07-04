@@ -28,4 +28,12 @@
 
 **Version 0:**
 
-<img alt="Screenshot Version 0" src="./assets/sewVersion0.jpg" width="250px"/>
+<img alt="Screenshot Version 0" src="./assets/sewVersion0.jpg" width="200px"/>
+
+<hr>
+
+**Version 0.1:**
+
+<img alt="Screenshot Welcome 0.1" src="./assets/sewWelcome01.png" width="200px"/>
+<img alt="Screenshot Gallery 0.1" src="./assets/sewGallery01.png" width="200px"/>
+

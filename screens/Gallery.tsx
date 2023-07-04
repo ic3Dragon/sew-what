@@ -1,14 +1,53 @@
-import { StyleSheet, Text, View } from 'react-native'
+import {View, StyleSheet, TextInput, Text} from 'react-native';
 import React from 'react'
+import { COLORS } from '../utils/constants';
 
 const Gallery = () => {
+  const [search, onChangeSearch] = React.useState('');
+
   return (
-    <View>
-      <Text>Gallery</Text>
+    <View style={styles.container}>
+      <View style={styles.filter}>
+        <TextInput
+          style={styles.input}
+          onChangeText={onChangeSearch}
+          value={search}
+          placeholder="Search    🔍"
+        />
+      </View>
+      <Text>All Patterns &gt; </Text>
+      <View style={styles.gallery}>
+        <Text>Individual pattern cards go here</Text>
+      </View>
     </View>
   )
 }
 
-export default Gallery
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: COLORS.light,
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    textAlign: 'center',
+    gap: 10 
+  },
+  filter: {
+    marginTop: 20
+  },
+  input: {
+    textAlign: 'center',
+    height: 50,
+    margin: 15,
+    width: 250,
+    borderWidth: 1,
+    padding: 10,
+    borderRadius: 10,
+    fontSize: 20,
+  },
+  gallery: {
 
-const styles = StyleSheet.create({})
+  }
+});
+
+export default Gallery
