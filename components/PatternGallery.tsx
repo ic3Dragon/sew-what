@@ -3,9 +3,8 @@ import React from 'react'
 import { COLORS } from '../utils/constants';
 import Button from '../components/Button';
 import PatternPreview from '../components/PatternPreview';
-import { data } from '../data';
 
-const Gallery = () => {
+const Gallery = ({data}) => {
   const [search, onChangeSearch] = React.useState('');
 
   return (
@@ -23,7 +22,7 @@ const Gallery = () => {
       <FlatList 
         style={styles.gallery} 
         data={data}
-        renderItem={({ item }) => <PatternPreview name={item.name} />}
+        renderItem={({ item }) => <PatternPreview name={item.name} company={item.company} imageSrc={item.imageSrc}/>}
         keyExtractor={pattern => pattern.id}
         horizontal={false}
         numColumns={2}

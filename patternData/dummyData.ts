@@ -1,6 +1,8 @@
 type PatternData = {
   id : string,
   name: string,
+  company: string,
+  imageSrc: string,
   hobby: string,
   category: string,
   subcategory: string, 
@@ -14,7 +16,7 @@ type PatternData = {
 };
 
 export const data: PatternData[] = [
-  { 
+  {
     id: '12',
     name: 'Sailor\'s Dress',
     hobby: 'Sewing',
@@ -26,7 +28,9 @@ export const data: PatternData[] = [
     comments: 'A lovely little sew but took foreeeeever to get the buttons done',
     printed: false,
     projectorFriendly: true,
-    files: ['link.to.file.one.pdf', 'link.to.projector.file.pdf', 'link.to.kids.size.pdf']
+    files: ['link.to.file.one.pdf', 'link.to.projector.file.pdf', 'link.to.kids.size.pdf'],
+    imageSrc: 'https://picsum.photos/200?random=1',
+    company: 'SewNautical'
   },
   {
     id: '1',
@@ -40,7 +44,9 @@ export const data: PatternData[] = [
     comments: 'Great pattern for beginners',
     printed: true,
     projectorFriendly: false,
-    files: ['pattern.pdf', 'instructions.pdf']
+    files: ['pattern.pdf', 'instructions.pdf'],
+    imageSrc: 'https://picsum.photos/200?random=2',
+    company: 'FunStitches'
   },
   {
     id: '2',
@@ -54,7 +60,9 @@ export const data: PatternData[] = [
     comments: 'Includes different sleeve options',
     printed: false,
     projectorFriendly: true,
-    files: ['pattern.pdf', 'instructions.pdf']
+    files: ['pattern.pdf', 'instructions.pdf'],
+    imageSrc: 'https://picsum.photos/200?random=3',
+    company: 'MachoStitch'
   },
   {
     id: '3',
@@ -68,7 +76,9 @@ export const data: PatternData[] = [
     comments: 'Perfect for crafting activities',
     printed: true,
     projectorFriendly: false,
-    files: ['pattern.pdf', 'instructions.pdf']
+    files: ['pattern.pdf', 'instructions.pdf'],
+    imageSrc: 'https://picsum.photos/200?random=4',
+    company: 'CreativeStitch'
   },
   {
     id: '4',
@@ -82,7 +92,9 @@ export const data: PatternData[] = [
     comments: 'Versatile pouch for various uses',
     printed: true,
     projectorFriendly: true,
-    files: ['pattern.pdf', 'instructions.pdf']
+    files: ['pattern.pdf', 'instructions.pdf'],
+    imageSrc: 'https://picsum.photos/200?random=15',
+    company: 'DreamStitches'
   },
   {
     id: '5',
@@ -96,7 +108,9 @@ export const data: PatternData[] = [
     comments: 'Includes adjustable straps',
     printed: true,
     projectorFriendly: false,
-    files: ['pattern.pdf', 'instructions.pdf']
+    files: ['pattern.pdf', 'instructions.pdf'],
+    imageSrc: 'https://picsum.photos/200?random=137',
+    company: 'TinyStitches'
   },
   {
     id: '6',
@@ -110,7 +124,9 @@ export const data: PatternData[] = [
     comments: 'Requires precise sewing techniques',
     printed: false,
     projectorFriendly: false,
-    files: ['pattern.pdf', 'instructions.pdf']
+    files: ['pattern.pdf', 'instructions.pdf'],
+    imageSrc: 'https://picsum.photos/200?random=13',
+    company: 'ChicStitch'
   },
   {
     id: '7',
@@ -124,7 +140,9 @@ export const data: PatternData[] = [
     comments: 'Spacious bag for craft supplies',
     printed: true,
     projectorFriendly: true,
-    files: ['pattern.pdf', 'instructions.pdf']
+    files: ['pattern.pdf', 'instructions.pdf'],
+    imageSrc: 'https://picsum.photos/200?random=178',
+    company: 'FunkyStitch'
   },
   {
     id: '8',
@@ -138,7 +156,9 @@ export const data: PatternData[] = [
     comments: 'Fun costume for dress-up play',
     printed: true,
     projectorFriendly: false,
-    files: ['pattern.pdf', 'instructions.pdf']
+    files: ['pattern.pdf', 'instructions.pdf'],
+    imageSrc: 'https://picsum.photos/200?random=98',
+    company: 'PlayfulPatterns'
   },
   {
     id: '9',
@@ -152,7 +172,9 @@ export const data: PatternData[] = [
     comments: 'Includes lining and zipper',
     printed: true,
     projectorFriendly: false,
-    files: ['pattern.pdf', 'instructions.pdf']
+    files: ['pattern.pdf', 'instructions.pdf'],
+    imageSrc: 'https://picsum.photos/200?random=75',
+    company: 'TrendyStitch'
   },
   {
     id: '10',
@@ -166,7 +188,9 @@ export const data: PatternData[] = [
     comments: 'Great for home decoration',
     printed: true,
     projectorFriendly: false,
-    files: ['pattern.pdf', 'instructions.pdf']
+    files: ['pattern.pdf', 'instructions.pdf'],
+    imageSrc: 'https://picsum.photos/200?random=42',
+    company: 'ArtisticStitch'
   },
   {
     id: '11',
@@ -180,7 +204,10 @@ export const data: PatternData[] = [
     comments: 'Includes snap fasteners',
     printed: true,
     projectorFriendly: false,
-    files: ['pattern.pdf', 'instructions.pdf']
+    files: ['pattern.pdf', 'instructions.pdf'],
+    imageSrc: 'https://picsum.photos/200?random=32',
+    company: 'WhimsyPatterns'
   },
 ];
+
 

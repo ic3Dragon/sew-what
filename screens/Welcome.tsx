@@ -14,7 +14,7 @@ const Welcome: React.FC<StackScreenProps<any>> = ({ navigation }) => {
       <Text style={styles.text}>Welcome!</Text>
       <Text style={styles.text}>App under construction...</Text>
       <View style={styles.buttons}>
-        <Button title="Open Gallery" color={COLORS.darkblue} onPress ={() => navigation.navigate('Gallery')}/>
+        <Button title="My Gallery" color={COLORS.darkblue} onPress ={() => navigation.navigate('My Gallery')}/>
         <Button title="Add New Pattern"  color={COLORS.darkblue} onPress ={() => navigation.navigate('New Pattern')}/>
       </View>
       <StatusBar style="auto" />
