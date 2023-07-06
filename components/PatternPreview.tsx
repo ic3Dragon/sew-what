@@ -1,5 +1,6 @@
 import { StyleSheet, Image, View, Text } from 'react-native'
 import React from 'react'
+import { COLORS } from '../utils/constants'
 
 const PatternPreview = ({name}) => {
   return (
@@ -14,15 +15,24 @@ export default PatternPreview
 
 const styles = StyleSheet.create({
   container : {
-    // flex: 1,
     alignItems: 'center',
-    backgroundColor: '#6767ea',
+    backgroundColor: COLORS.light,
     width: 150,
-    height: 150
+    height: 175,
+    margin: 10,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.23,
+    shadowRadius: 2.62,
+    elevation: 4,
+    borderRadius: 5,
   },
   patternImage : {
     resizeMode: 'contain',
-    height: 100,
+    height: 130,
     width: 100,
   }
 })

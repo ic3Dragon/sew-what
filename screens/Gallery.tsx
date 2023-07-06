@@ -22,10 +22,11 @@ const Gallery = () => {
       <Text>All Patterns &gt; </Text>
       <FlatList 
         style={styles.gallery} 
-        contentContainerStyle={{ justifyContent: 'center' }}
         data={data}
         renderItem={({ item }) => <PatternPreview name={item.name} />}
-        keyExtractor={pattern => pattern.id} 
+        keyExtractor={pattern => pattern.id}
+        horizontal={false}
+        numColumns={2}
       />
     </View>
   )
@@ -38,7 +39,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     textAlign: 'center',
-    gap: 10 
+    gap: 10,
   },
   filter: {
     marginTop: 20
@@ -54,12 +55,10 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   gallery: {
-    flex: 1,
     flexWrap: 'wrap',
-    alignContent: 'space-around',
+    alignContent: 'center',
     width: '100%',
     gap: 30,
-    padding: 15,
   }
 });
 
