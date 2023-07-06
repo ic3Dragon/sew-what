@@ -13,7 +13,7 @@ type PatternData = {
   files: string[]
 };
 
-const data: PatternData[] = [
+export const data: PatternData[] = [
   { 
     id: '12',
     name: 'Sailor\'s Dress',
