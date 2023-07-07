@@ -1,6 +1,8 @@
 type PatternData = {
   id : string,
-  name: string,
+  patternName: string,
+  company: string,
+  imageSrc: string,
   hobby: string,
   category: string,
   subcategory: string, 
@@ -13,10 +15,10 @@ type PatternData = {
   files: string[]
 };
 
-const data: PatternData[] = [
-  { 
+export const data: PatternData[] = [
+  {
     id: '12',
-    name: 'Sailor\'s Dress',
+    patternName: 'Sailor\'s Dress',
     hobby: 'Sewing',
     category: 'Womens',
     subcategory: 'Dress',
@@ -26,11 +28,13 @@ const data: PatternData[] = [
     comments: 'A lovely little sew but took foreeeeever to get the buttons done',
     printed: false,
     projectorFriendly: true,
-    files: ['link.to.file.one.pdf', 'link.to.projector.file.pdf', 'link.to.kids.size.pdf']
+    files: ['link.to.file.one.pdf', 'link.to.projector.file.pdf', 'link.to.kids.size.pdf'],
+    imageSrc: 'https://picsum.photos/200?random=1',
+    company: 'SewNautical'
   },
   {
     id: '1',
-    name: 'Funky Kids Dress',
+    patternName: 'Funky Kids Dress',
     hobby: 'Sewing',
     category: 'kids',
     subcategory: 'Dress',
@@ -40,11 +44,13 @@ const data: PatternData[] = [
     comments: 'Great pattern for beginners',
     printed: true,
     projectorFriendly: false,
-    files: ['pattern.pdf', 'instructions.pdf']
+    files: ['pattern.pdf', 'instructions.pdf'],
+    imageSrc: 'https://picsum.photos/200?random=2',
+    company: 'FunStitches'
   },
   {
     id: '2',
-    name: 'Cool Men\'s T-Shirt',
+    patternName: 'Cool Men\'s T-Shirt',
     hobby: 'Sewing',
     category: 'mens',
     subcategory: 'T-Shirt',
@@ -54,11 +60,13 @@ const data: PatternData[] = [
     comments: 'Includes different sleeve options',
     printed: false,
     projectorFriendly: true,
-    files: ['pattern.pdf', 'instructions.pdf']
+    files: ['pattern.pdf', 'instructions.pdf'],
+    imageSrc: 'https://picsum.photos/200?random=3',
+    company: 'MachoStitch'
   },
   {
     id: '3',
-    name: 'Artsy Craft Apron',
+    patternName: 'Artsy Craft Apron',
     hobby: 'Sewing',
     category: 'crafts',
     subcategory: 'Apron',
@@ -68,11 +76,13 @@ const data: PatternData[] = [
     comments: 'Perfect for crafting activities',
     printed: true,
     projectorFriendly: false,
-    files: ['pattern.pdf', 'instructions.pdf']
+    files: ['pattern.pdf', 'instructions.pdf'],
+    imageSrc: 'https://picsum.photos/200?random=4',
+    company: 'CreativeStitch'
   },
   {
     id: '4',
-    name: 'Whimsical Unisex Pouch',
+    patternName: 'Whimsical Unisex Pouch',
     hobby: 'Sewing',
     category: 'unisex',
     subcategory: 'Pouch',
@@ -82,11 +92,13 @@ const data: PatternData[] = [
     comments: 'Versatile pouch for various uses',
     printed: true,
     projectorFriendly: true,
-    files: ['pattern.pdf', 'instructions.pdf']
+    files: ['pattern.pdf', 'instructions.pdf'],
+    imageSrc: 'https://picsum.photos/200?random=15',
+    company: 'DreamStitches'
   },
   {
     id: '5',
-    name: 'Playful Kids Overalls',
+    patternName: 'Playful Kids Overalls',
     hobby: 'Sewing',
     category: 'kids',
     subcategory: 'Overalls',
@@ -96,11 +108,13 @@ const data: PatternData[] = [
     comments: 'Includes adjustable straps',
     printed: true,
     projectorFriendly: false,
-    files: ['pattern.pdf', 'instructions.pdf']
+    files: ['pattern.pdf', 'instructions.pdf'],
+    imageSrc: 'https://picsum.photos/200?random=137',
+    company: 'TinyStitches'
   },
   {
     id: '6',
-    name: 'Elegant Women\'s Blouse',
+    patternName: 'Elegant Women\'s Blouse',
     hobby: 'Sewing',
     category: 'womens',
     subcategory: 'Blouse',
@@ -110,11 +124,13 @@ const data: PatternData[] = [
     comments: 'Requires precise sewing techniques',
     printed: false,
     projectorFriendly: false,
-    files: ['pattern.pdf', 'instructions.pdf']
+    files: ['pattern.pdf', 'instructions.pdf'],
+    imageSrc: 'https://picsum.photos/200?random=13',
+    company: 'ChicStitch'
   },
   {
     id: '7',
-    name: 'Quirky Craft Tote Bag',
+    patternName: 'Quirky Craft Tote Bag',
     hobby: 'Sewing',
     category: 'crafts',
     subcategory: 'Tote Bag',
@@ -124,11 +140,13 @@ const data: PatternData[] = [
     comments: 'Spacious bag for craft supplies',
     printed: true,
     projectorFriendly: true,
-    files: ['pattern.pdf', 'instructions.pdf']
+    files: ['pattern.pdf', 'instructions.pdf'],
+    imageSrc: 'https://picsum.photos/200?random=178',
+    company: 'FunkyStitch'
   },
   {
     id: '8',
-    name: 'Adorable Kids Costume',
+    patternName: 'Adorable Kids Costume',
     hobby: 'Sewing',
     category: 'kids',
     subcategory: 'Costume',
@@ -138,11 +156,13 @@ const data: PatternData[] = [
     comments: 'Fun costume for dress-up play',
     printed: true,
     projectorFriendly: false,
-    files: ['pattern.pdf', 'instructions.pdf']
+    files: ['pattern.pdf', 'instructions.pdf'],
+    imageSrc: 'https://picsum.photos/200?random=98',
+    company: 'PlayfulPatterns'
   },
   {
     id: '9',
-    name: 'Fashionable Men\'s Skirt',
+    patternName: 'Fashionable Men\'s Skirt',
     hobby: 'Sewing',
     category: 'mens',
     subcategory: 'Skirt',
@@ -152,11 +172,13 @@ const data: PatternData[] = [
     comments: 'Includes lining and zipper',
     printed: true,
     projectorFriendly: false,
-    files: ['pattern.pdf', 'instructions.pdf']
+    files: ['pattern.pdf', 'instructions.pdf'],
+    imageSrc: 'https://picsum.photos/200?random=75',
+    company: 'TrendyStitch'
   },
   {
     id: '10',
-    name: 'Creative Craft Pillow Cover',
+    patternName: 'Creative Craft Pillow Cover',
     hobby: 'Sewing',
     category: 'crafts',
     subcategory: 'Pillow Cover',
@@ -166,11 +188,13 @@ const data: PatternData[] = [
     comments: 'Great for home decoration',
     printed: true,
     projectorFriendly: false,
-    files: ['pattern.pdf', 'instructions.pdf']
+    files: ['pattern.pdf', 'instructions.pdf'],
+    imageSrc: 'https://picsum.photos/200?random=42',
+    company: 'ArtisticStitch'
   },
   {
     id: '11',
-    name: 'Magical Kids Romper',
+    patternName: 'Magical Kids Romper',
     hobby: 'Sewing',
     category: 'kids',
     subcategory: 'Romper',
@@ -180,7 +204,10 @@ const data: PatternData[] = [
     comments: 'Includes snap fasteners',
     printed: true,
     projectorFriendly: false,
-    files: ['pattern.pdf', 'instructions.pdf']
+    files: ['pattern.pdf', 'instructions.pdf'],
+    imageSrc: 'https://picsum.photos/200?random=32',
+    company: 'WhimsyPatterns'
   },
 ];
+
 

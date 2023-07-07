@@ -1,8 +1,10 @@
-import {View, StyleSheet, TextInput, Text} from 'react-native';
+import {View, StyleSheet, TextInput, Text, FlatList} from 'react-native';
 import React from 'react'
 import { COLORS } from '../utils/constants';
+import Button from '../components/Button';
+import PatternPreview from '../components/PatternPreview';
 
-const Gallery = () => {
+const Gallery = ({data}) => {
   const [search, onChangeSearch] = React.useState('');
 
   return (
@@ -15,10 +17,17 @@ const Gallery = () => {
           placeholder="Search    🔍"
         />
       </View>
+      <Button title='Filters' color={COLORS.orange} onPress={() => alert('not implemented')}></Button>
       <Text>All Patterns &gt; </Text>
-      <View style={styles.gallery}>
-        <Text>Individual pattern cards go here</Text>
-      </View>
+      <Text> Showing {data.length} patterns </Text>
+      <FlatList 
+        style={styles.gallery} 
+        data={data}
+        renderItem={({ item }) => <PatternPreview name={item.patternName} company={item.company} imageSrc={item.imageSrc}/>}
+        keyExtractor={pattern => pattern.id}
+        horizontal={false}
+        numColumns={2}
+      />
     </View>
   )
 }
@@ -30,7 +39,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     textAlign: 'center',
-    gap: 10 
+    gap: 10,
   },
   filter: {
     marginTop: 20
@@ -46,7 +55,10 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   gallery: {
-
+    flexWrap: 'wrap',
+    alignContent: 'center',
+    width: '100%',
+    gap: 30,
   }
 });
 
