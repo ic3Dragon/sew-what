@@ -19,10 +19,11 @@ const Gallery = ({data}) => {
       </View>
       <Button title='Filters' color={COLORS.orange} onPress={() => alert('not implemented')}></Button>
       <Text>All Patterns &gt; </Text>
+      <Text> Showing {data.length} patterns </Text>
       <FlatList 
         style={styles.gallery} 
         data={data}
-        renderItem={({ item }) => <PatternPreview name={item.name} company={item.company} imageSrc={item.imageSrc}/>}
+        renderItem={({ item }) => <PatternPreview name={item.patternName} company={item.company} imageSrc={item.imageSrc}/>}
         keyExtractor={pattern => pattern.id}
         horizontal={false}
         numColumns={2}

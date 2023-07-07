@@ -1,6 +1,6 @@
 type PatternData = {
   id : string,
-  name: string,
+  patternName: string,
   company: string,
   imageSrc: string,
   hobby: string,
@@ -18,7 +18,7 @@ type PatternData = {
 export const data: PatternData[] = [
   {
     id: '12',
-    name: 'Sailor\'s Dress',
+    patternName: 'Sailor\'s Dress',
     hobby: 'Sewing',
     category: 'Womens',
     subcategory: 'Dress',
@@ -34,7 +34,7 @@ export const data: PatternData[] = [
   },
   {
     id: '1',
-    name: 'Funky Kids Dress',
+    patternName: 'Funky Kids Dress',
     hobby: 'Sewing',
     category: 'kids',
     subcategory: 'Dress',
@@ -50,7 +50,7 @@ export const data: PatternData[] = [
   },
   {
     id: '2',
-    name: 'Cool Men\'s T-Shirt',
+    patternName: 'Cool Men\'s T-Shirt',
     hobby: 'Sewing',
     category: 'mens',
     subcategory: 'T-Shirt',
@@ -66,7 +66,7 @@ export const data: PatternData[] = [
   },
   {
     id: '3',
-    name: 'Artsy Craft Apron',
+    patternName: 'Artsy Craft Apron',
     hobby: 'Sewing',
     category: 'crafts',
     subcategory: 'Apron',
@@ -82,7 +82,7 @@ export const data: PatternData[] = [
   },
   {
     id: '4',
-    name: 'Whimsical Unisex Pouch',
+    patternName: 'Whimsical Unisex Pouch',
     hobby: 'Sewing',
     category: 'unisex',
     subcategory: 'Pouch',
@@ -98,7 +98,7 @@ export const data: PatternData[] = [
   },
   {
     id: '5',
-    name: 'Playful Kids Overalls',
+    patternName: 'Playful Kids Overalls',
     hobby: 'Sewing',
     category: 'kids',
     subcategory: 'Overalls',
@@ -114,7 +114,7 @@ export const data: PatternData[] = [
   },
   {
     id: '6',
-    name: 'Elegant Women\'s Blouse',
+    patternName: 'Elegant Women\'s Blouse',
     hobby: 'Sewing',
     category: 'womens',
     subcategory: 'Blouse',
@@ -130,7 +130,7 @@ export const data: PatternData[] = [
   },
   {
     id: '7',
-    name: 'Quirky Craft Tote Bag',
+    patternName: 'Quirky Craft Tote Bag',
     hobby: 'Sewing',
     category: 'crafts',
     subcategory: 'Tote Bag',
@@ -146,7 +146,7 @@ export const data: PatternData[] = [
   },
   {
     id: '8',
-    name: 'Adorable Kids Costume',
+    patternName: 'Adorable Kids Costume',
     hobby: 'Sewing',
     category: 'kids',
     subcategory: 'Costume',
@@ -162,7 +162,7 @@ export const data: PatternData[] = [
   },
   {
     id: '9',
-    name: 'Fashionable Men\'s Skirt',
+    patternName: 'Fashionable Men\'s Skirt',
     hobby: 'Sewing',
     category: 'mens',
     subcategory: 'Skirt',
@@ -178,7 +178,7 @@ export const data: PatternData[] = [
   },
   {
     id: '10',
-    name: 'Creative Craft Pillow Cover',
+    patternName: 'Creative Craft Pillow Cover',
     hobby: 'Sewing',
     category: 'crafts',
     subcategory: 'Pillow Cover',
@@ -194,7 +194,7 @@ export const data: PatternData[] = [
   },
   {
     id: '11',
-    name: 'Magical Kids Romper',
+    patternName: 'Magical Kids Romper',
     hobby: 'Sewing',
     category: 'kids',
     subcategory: 'Romper',
