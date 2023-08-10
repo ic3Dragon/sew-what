@@ -10,11 +10,11 @@ type PatternPreviewProps = {
 const PatternPreview = ({name, imageSrc, company}:PatternPreviewProps) => {
   return (
     <View style={styles.container}>
+      <Text>{company}</Text>
       <Image source={imageSrc && {
           uri: imageSrc,
         }} style={styles.patternImage} alt={name}/>
       <Text>{name}</Text>
-      <Text>{company}</Text>
     </View>
   )
 }
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: COLORS.light,
     width: 150,
-    height: 175,
+    height: 200,
     margin: 10,
     shadowColor: "#000",
     shadowOffset: {
