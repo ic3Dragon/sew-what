@@ -12,7 +12,7 @@ const Stack = createStackNavigator();
 export default function UserStack() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Welcome" component={Welcome} />
         <Stack.Screen name="My Gallery" component={ MyGallery } />
         <Stack.Screen name="New Pattern" component={ NewPattern } />
