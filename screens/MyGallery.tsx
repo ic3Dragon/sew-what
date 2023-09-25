@@ -8,7 +8,7 @@ const MyGallery = () => {
 
   return (
     <>
-    <PatternGallery data={data} />
+    <PatternGallery patterns={data} />
     <StatusBar style="auto" />
     </>
   )

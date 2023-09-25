@@ -1,11 +1,13 @@
 import {View, StyleSheet, TextInput, Text, FlatList} from 'react-native';
-import React from 'react'
+import React, { useCallback } from 'react'
 import { COLORS } from '../utils/constants';
 import Button from '../components/Button';
 import PatternPreview from '../components/PatternPreview';
 
-const Gallery = ({data}) => {
+const Gallery = ({patterns}) => {
   const [search, onChangeSearch] = React.useState('');
+
+  const renderPreview = useCallback(({ item }) => (<PatternPreview name={item.patternName} company={item.company} imageSrc={item.imageSrc}/>),[]);
 
   return (
     <View style={styles.container}>
@@ -19,11 +21,11 @@ const Gallery = ({data}) => {
       </View>
       <Button title='Filters' color={COLORS.orange} onPress={() => alert('not implemented')}></Button>
       <Text>All Patterns &gt; </Text>
-      <Text> Showing {data.length} patterns </Text>
+      <Text> Showing {patterns.length} patterns </Text>
       <FlatList 
         style={styles.gallery} 
-        data={data}
-        renderItem={({ item }) => <PatternPreview name={item.patternName} company={item.company} imageSrc={item.imageSrc}/>}
+        data={patterns}
+        renderItem={renderPreview}
         keyExtractor={pattern => pattern.id}
         horizontal={false}
         numColumns={2}

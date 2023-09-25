@@ -10,7 +10,7 @@ import PatternGallery from '../components/PatternGallery';
 const Explore = () => {
   return (
     <>
-    <PatternGallery data={patternData}/>
+    <PatternGallery patterns={patternData}/>
     <StatusBar style="auto" />
     </>
   )
