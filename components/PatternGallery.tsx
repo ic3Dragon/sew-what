@@ -3,11 +3,17 @@ import React, { useCallback } from 'react'
 import { COLORS } from '../utils/constants';
 import Button from '../components/Button';
 import PatternPreview from '../components/PatternPreview';
+import { PatternData } from "../utils/types";
 
-const Gallery = ({patterns}) => {
+
+type Props = {
+  patterns: PatternData[]
+}
+
+const Gallery = ({patterns}: Props) => {
   const [search, onChangeSearch] = React.useState('');
 
-  const renderPreview = useCallback(({ item }) => (<PatternPreview name={item.patternName} company={item.company} imageSrc={item.imageSrc}/>),[]);
+  const renderPreview = useCallback(({ item }) => (<PatternPreview pattern={item}/>),[]);
 
   return (
     <View style={styles.container}>

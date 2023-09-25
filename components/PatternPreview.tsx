@@ -1,20 +1,19 @@
 import { StyleSheet, Image, View, Text } from 'react-native'
 import React from 'react'
 import { COLORS } from '../utils/constants'
+import { PatternData } from '../utils/types'
 
 type PatternPreviewProps = {
-  name: string,
-  imageSrc?: string,
-  company?: string
+  pattern: PatternData
 }
-const PatternPreview = ({name, imageSrc, company}:PatternPreviewProps) => {
+const PatternPreview = ({pattern}: PatternPreviewProps) => {
   return (
     <View style={styles.container}>
-      <Text>{company}</Text>
-      <Image source={imageSrc && {
-          uri: imageSrc,
-        }} style={styles.patternImage} alt={name}/>
-      <Text>{name}</Text>
+      <Text>{pattern.company}</Text>
+      <Image source={pattern.imageSrc && {
+          uri: pattern.imageSrc,
+        }} style={styles.patternImage} alt={pattern.patternName}/>
+      <Text>{pattern.patternName}</Text>
     </View>
   )
 }
