@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   filter: {
-    marginTop: 20
+    marginTop: 5
   },
   input: {
     textAlign: 'center',

@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     color: COLORS.dark,
   },
   logo_container: {
-    marginTop: -120,
+    marginTop: -40,
     marginBottom: 30,
     width: 170,
     height: 170,
