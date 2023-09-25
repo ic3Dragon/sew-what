@@ -11,52 +11,22 @@ import { COLORS } from '../utils/constants';
 
 const Stack = createStackNavigator();
 
-const headerStyleOptions = {
-  headerStyle: {
-    backgroundColor: COLORS.darkblue,
-    height: 120,
-  },
-  headerTintColor: '#fff',
-  headerTitleStyle: {
-    fontWeight: 'bold',
-  },
-}
-
 export default function UserStack() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{
+        headerStyle: {
+          backgroundColor: COLORS.darkblue,
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+        },
+      }}>
         <Stack.Screen name="Welcome" component={Welcome} options={{headerShown: false}}/>
-        <Stack.Screen name="Explore" component={ Explore } options={{
-          title: 'Explore Patterns',
-          headerStyle: {
-            backgroundColor: '#f4511e',
-          },
-          headerTintColor: '#fff',
-          headerTitleStyle: {
-            fontWeight: 'bold',
-          },
-        }}/>
-        <Stack.Screen name="My Gallery" component={ MyGallery } options={{
-          title: 'My Gallery',
-          headerStyle: {
-            backgroundColor: '#f4511e',
-          },
-          headerTintColor: '#fff',
-          headerTitleStyle: {
-            fontWeight: 'bold',
-          },
-        }}/>
-        <Stack.Screen name="New Pattern" component={ NewPattern } options={{
-          title: 'Add New Pattern',
-          headerStyle: {
-            backgroundColor: '#f4511e',
-          },
-          headerTintColor: '#fff',
-          headerTitleStyle: {
-            fontWeight: 'bold',
-          },
-        }}/>
+        <Stack.Screen name="Explore" component={ Explore } options={{ title: 'Explore Patterns' }}/>
+        <Stack.Screen name="My Gallery" component={ MyGallery } options={{ title: 'My Gallery' }}/>
+        <Stack.Screen name="New Pattern" component={ NewPattern } options={{ title: 'Add New Pattern' }}/>
       </Stack.Navigator>
     
     </NavigationContainer>
