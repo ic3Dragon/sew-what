@@ -6,14 +6,16 @@ import { PatternData } from '../utils/types'
 type PatternPreviewProps = {
   pattern: PatternData
 }
+
+const removePatternFromName = (name: string):string => name.replace(/\bpattern\b/i, '');
+
 const PatternPreview = ({pattern}: PatternPreviewProps) => {
   return (
     <View style={styles.container}>
-      <Text>{pattern.company}</Text>
       <Image source={pattern.imageSrc && {
           uri: pattern.imageSrc,
         }} style={styles.patternImage} alt={pattern.patternName}/>
-      <Text>{pattern.patternName}</Text>
+      <Text style={styles.patternName}>{removePatternFromName(pattern.patternName)}</Text>
     </View>
   )
 }
@@ -41,5 +43,8 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     height: 130,
     width: 100,
+  },
+  patternName : {
+
   }
 })
