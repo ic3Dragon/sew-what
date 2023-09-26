@@ -12,9 +12,11 @@ const removePatternFromName = (name: string):string => name.replace(/\bpattern\b
 const PatternPreview = ({pattern}: PatternPreviewProps) => {
   return (
     <View style={styles.container}>
+    <View style={styles.imageContainer}>
       <Image source={pattern.imageSrc && {
           uri: pattern.imageSrc,
         }} style={styles.patternImage} alt={pattern.patternName}/>
+    </View>
       <Text style={styles.patternName}>{removePatternFromName(pattern.patternName)}</Text>
     </View>
   )
@@ -23,7 +25,15 @@ const PatternPreview = ({pattern}: PatternPreviewProps) => {
 export default PatternPreview
 
 const styles = StyleSheet.create({
-  container : {
+  container: {
+    alignItems: 'center',
+    backgroundColor: COLORS.light,
+    width: 150,
+    maxHeight: 260,
+    minHeight: 230,
+    margin: 15,
+  },
+  imageContainer : {
     alignItems: 'center',
     backgroundColor: COLORS.light,
     width: 150,
@@ -38,13 +48,19 @@ const styles = StyleSheet.create({
     shadowRadius: 2.62,
     elevation: 4,
     borderRadius: 5,
+    overflow: 'hidden',
   },
   patternImage : {
     resizeMode: 'contain',
-    height: 130,
-    width: 100,
+    height: 208,
+    width: 160,
+    borderRadius: 5,
+    marginTop: -4,
   },
   patternName : {
-
+    textAlign: 'center',
+    textAlignVertical: 'center',
+    verticalAlign: 'middle',
+    paddingHorizontal: 4
   }
 })

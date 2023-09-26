@@ -47,15 +47,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     textAlign: 'center',
-    gap: 10,
+    gap: 5,
   },
   filter: {
-    marginTop: 5
+
   },
   input: {
     textAlign: 'center',
     height: 50,
-    margin: 15,
+    marginTop: 15,
+    marginBottom: 5,
     width: 250,
     borderWidth: 1,
     padding: 10,
@@ -66,7 +67,7 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     alignContent: 'center',
     width: '100%',
-    gap: 30,
+    marginTop: 10,
   }
 });
 
