@@ -2,7 +2,8 @@
 
 ## Description
 
-  This is a passion project made to help me and other hobby-sewers keep all their digital hobby files in neat order.
+  This is a passion project made to help me and other sewers keep all their digital sewing patterns in neat order.
+  It also let's you search for and explore patterns from a few of the most popular online pattern creators and will let you save them to your collection.
 
 ## Tech Stack
 
@@ -24,7 +25,7 @@
 
 [To be added later](.)
 
-### Screenshots
+### Development Progress
 
 **Version 0:**
 
@@ -34,6 +35,18 @@
 
 **Version 0.1:**
 
-<img alt="Screenshot Welcome 0.1" src="./assets/sewWelcome01.png" width="200px"/>
-<img alt="Screenshot Gallery 0.1" src="./assets/sewGallery01.png" width="200px"/>
+Bare bones layout of Welcome Screen and Gallery
+
+<img alt="Screenshot Welcome V 0.1" src="./assets/sewWelcome01.png" width="200px"/>
+<img alt="Screenshot Gallery V 0.1" src="./assets/sewGallery01.png" width="200px"/>
+
+<hr>
+
+**Version 0.2:**
+
+ Scrollabble galleries with patterns found online and users own patterns in Explore and My Patterns.
+
+<img alt="Screenshot Welcome V 0.2" src="./assets/sewVersion02-home.png" width="200px"/>
+<img alt="Screenshot Gallery V 0.2" src="./assets/sewVersion02-gallery.png" width="200px"/>
+<img alt="Screenshot Gallery V 0.2" src="./assets/sewVersion02-galleryWeb.png" width="400px"/>
 
