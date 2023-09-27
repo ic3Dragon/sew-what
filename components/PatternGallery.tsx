@@ -1,4 +1,4 @@
-import {View, StyleSheet, TextInput, Text, FlatList} from 'react-native';
+import {View, StyleSheet, TextInput, Text, FlatList, Dimensions} from 'react-native';
 import React, { useCallback } from 'react'
 import { COLORS } from '../utils/constants';
 import Button from '../components/Button';
@@ -14,6 +14,15 @@ const Gallery = ({patterns}: Props) => {
   const [search, onChangeSearch] = React.useState('');
 
   const renderPreview = useCallback(({ item }) => (<PatternPreview pattern={item}/>),[]);
+
+  const calculateNrColumns = () => {
+    const windowWidth = Dimensions.get('window').width;
+    const minSideMargins = 20;
+    const columnWidthInclMargin = 180;
+    const columnsThatFit = Math.floor((windowWidth - minSideMargins)/columnWidthInclMargin);
+
+    return columnsThatFit > 6 ? 6 : columnsThatFit;
+  }
 
   return (
     <View style={styles.container}>
@@ -34,7 +43,7 @@ const Gallery = ({patterns}: Props) => {
         renderItem={renderPreview}
         keyExtractor={pattern => pattern.id}
         horizontal={false}
-        numColumns={2}
+        numColumns={calculateNrColumns()}
       />
     </View>
   )
