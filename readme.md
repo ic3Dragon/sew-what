@@ -49,4 +49,3 @@ Bare bones layout of Welcome Screen and Gallery
 <img alt="Screenshot Welcome V 0.2" src="./assets/sewVersion02-home.png" width="200px"/>
 <img alt="Screenshot Gallery V 0.2" src="./assets/sewVersion02-gallery.png" width="200px"/>
 <img alt="Screenshot Gallery V 0.2" src="./assets/sewVersion02-galleryWeb.png" width="400px"/>
-
