@@ -13,13 +13,15 @@
 
 ### Planning Board & Design
 
+This was the first plan for the app. The vision remains but it's growing and changing during development. I decided to wait with the logins and add an Explore feature that lets the user search and find patterns from various online creators that they can then add to their own gallery. I asked myself why would you want to manually add all the data about a pattern when so much is already available.
+
 ![Excalidraw Board](./assets/sew-what-planning.png)
 
 [Color Template](https://huemint.com/website-1/#palette=fdfdfd-05aabc-f8ae06)
 
-### Prototype
+<!-- ### Prototype
 
-[Marvel Prototype](https://marvelapp.com/prototype/9f97jii/screen/91074177)
+[Marvel Prototype](https://marvelapp.com/prototype/9f97jii/screen/91074177) -->
 
 ### Available at
 
