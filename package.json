@@ -1,6 +1,7 @@
 {
   "name": "sew-what",
   "version": "1.0.0",
+  "license": "CC BY-NC 4.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
