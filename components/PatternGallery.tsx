@@ -1,17 +1,50 @@
 import {View, StyleSheet, TextInput, Text, FlatList, Dimensions} from 'react-native';
-import React, { useCallback } from 'react'
+import React, { useCallback, useEffect } from 'react'
 import { COLORS } from '../utils/constants';
-import Button from '../components/Button';
 import PatternPreview from '../components/PatternPreview';
 import { PatternData } from "../utils/types";
-
+import Filter from './Filter';
+import Fuse from 'fuse.js';
 
 type Props = {
   patterns: PatternData[]
 }
 
+const fuseOptions = {
+	isCaseSensitive: false,
+	// includeScore: false,
+	shouldSort: true,
+	// includeMatches: false,
+	findAllMatches: true,
+	// minMatchCharLength: 1,
+	// location: 0,
+	threshold: 0.4,
+	// distance: 100,
+	// useExtendedSearch: false,
+	// ignoreLocation: false,
+	// ignoreFieldNorm: false,
+	// fieldNormWeight: 1,
+	keys: [
+		'patternName',
+		'company',
+    'tags'
+	]
+};
+
 const Gallery = ({patterns}: Props) => {
-  const [search, onChangeSearch] = React.useState('');
+  const [searchQuery, setSearchQuery] = React.useState('');
+  const [patternsToShow, setPatternsToShow] = React.useState(patterns);
+
+  const fuse = new Fuse(patterns, fuseOptions);
+
+  useEffect(() => {
+    if(!searchQuery) {
+      setPatternsToShow(patterns);
+    } else {
+    const results = fuse.search(searchQuery).map((result) => result.item);
+    setPatternsToShow(results);
+  }
+  },[searchQuery]);
 
   const renderPreview = useCallback(({ item }) => (<PatternPreview pattern={item}/>),[]);
 
@@ -29,17 +62,17 @@ const Gallery = ({patterns}: Props) => {
       <View style={styles.filter}>
         <TextInput
           style={styles.input}
-          onChangeText={onChangeSearch}
-          value={search}
+          onChangeText={setSearchQuery}
+          value={searchQuery}
           placeholder="Search    🔍"
         />
       </View>
-      <Button title='Filters' color={COLORS.orange} onPress={() => alert('not implemented')}></Button>
+      <Filter />
       <Text>All Patterns &gt; </Text>
-      <Text> Showing {patterns.length} patterns </Text>
+      <Text> Showing {patternsToShow.length} patterns </Text>
       <FlatList 
         style={styles.gallery} 
-        data={patterns}
+        data={patternsToShow}
         renderItem={renderPreview}
         keyExtractor={pattern => pattern.id}
         horizontal={false}
